@@ -1,0 +1,44 @@
+identity:
+  author: baidu
+  name: baidu-ai-guard
+  label:
+    en_US: baidu-ai-guard
+    zh_Hans: baidu-ai-guard
+    pt_BR: baidu-ai-guard
+  description:
+    en_US: baidu-ai-guard Help detect illegal content in input and output
+    zh_Hans: baidu-ai-guard Help detect illegal content in input and output
+    pt_BR: baidu-ai-guard Help detect illegal content in input and output
+  icon: icon.svg
+credentials_for_provider: #添加 credentials_for_provider 字段
+  access_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Access Key
+      zh_Hans: Access Key
+    placeholder:
+      en_US: Please input your Access Key
+      zh_Hans: 请输入你的 Access Key
+    help:
+      en_US: Get your Access Key key from BAIDU CLOUD
+      zh_Hans: 从 百度云 获取您的 Access Key
+    url: https://console.bce.baidu.com/iam/#/iam/accesslist
+  secret_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Secret Key
+      zh_Hans: Secret Key
+    placeholder:
+      en_US: Please input your Secret Key
+      zh_Hans: 请输入你的 Secret Key
+    help:
+      en_US: Get your Secret Key key from BAIDU CLOUD
+      zh_Hans: 从 百度云 获取您的 Secret Key
+    url: https://console.bce.baidu.com/iam/#/iam/accesslist
+tools:
+  - tools/input_analyze.yaml
+extra:
+  python:
+    source: provider/baidu-ai-guard.py

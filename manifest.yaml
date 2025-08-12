@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: baidu
+name: baidu-ai-guard
+label:
+  en_US: baidu-ai-guard
+  ja_JP: baidu-ai-guard
+  zh_Hans: baidu-ai-guard
+  pt_BR: baidu-ai-guard
+description:
+  en_US: baidu-ai-guard Help detect illegal content in input and output
+  ja_JP: baidu-ai-guard Help detect illegal content in input and output
+  zh_Hans: baidu-ai-guard Help detect illegal content in input and output
+  pt_BR: baidu-ai-guard Help detect illegal content in input and output
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+    - provider/baidu-ai-guard.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-06-27T14:40:57.813905+08:00
+privacy: PRIVACY.md
+verified: false

@@ -1,0 +1,39 @@
+identity:
+  name: input_analyze
+  author: baidu
+  label:
+    en_US: input_analyze
+    zh_Hans: input_analyze
+    pt_BR: input_analyze
+description:
+  human:
+    en_US: input_analyze Help detect illegal content in input
+    zh_Hans: input_analyze Help detect illegal content in input
+    pt_BR: input_analyze Help detect illegal content in input
+  llm: input_analyze Help detect illegal content in input
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    llm_description: Query string
+    form: llm
+
+output_schema:
+  type: object
+  properties:
+    action:
+      type: number
+    answer:
+      type: string
+
+extra:
+  python:
+    source: tools/input_analyze.py
